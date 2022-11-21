@@ -28,7 +28,7 @@
     top: 77px;
     left: 0;
     border-radius: 15px;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: var(--bg-color-header);
     opacity: 0;
     visibility: hidden;
     -webkit-transition: opacity .5s ease, visibility .5s ease;
@@ -42,6 +42,10 @@
     -webkit-transition: opacity .5s ease, visibility .5s ease;
     -o-transition: opacity .5s ease, visibility .5s ease;
     transition: opacity .5s ease, visibility .5s ease;
+  }
+
+  .header__nav--bg-down {
+    background-color: var(--color-black);
   }
 
   .nav__list {
@@ -136,9 +140,10 @@
     width: 25%;
   }
 
-  .link {
+
+  .table__link {
     padding: 3px 5px;
-    font-size: 8px;
+    font-size: 13px;
   }
 }
 
