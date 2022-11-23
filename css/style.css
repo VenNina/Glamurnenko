@@ -219,62 +219,71 @@ body {
 
 /* burger */
 
-.header__burger {
+.burger {
   display: none;
   position: relative;
-  width: 29px;
-  height: 29px;
+  z-index: 200;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 28px;
+  height: 24px;
+  color: var(--color-white);
+  background-color: transparent;
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 
 .burger__line {
   position: absolute;
-  left: 50%;
-  width: 26px;
-  height: 2px;
-  border-radius: 100px;
-  background-color: var(--color-white);
+  left: 0;
+  height: 3px;
+  color: currentColor;
+  background-color: currentColor;
 }
 
 .burger__line:nth-child(1) {
-  top: 5px;
-  -webkit-transform: translateX(-50%) translateY(0);
-  -ms-transform: translateX(-50%) translateY(0);
-  transform: translateX(-50%) translateY(0);
-  -webkit-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, background-color .3s ease, -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
-  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, background-color .3s ease, -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
-  -o-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), background-color .3s ease;
-  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), background-color .3s ease;
-  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), background-color .3s ease, -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  top: 0;
+  right: 0;
+  -webkit-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  -o-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
 }
 
 .burger__line:nth-child(2) {
-  top: 13px;
+  top: 50%;
+  right: 23%;
   opacity: 1;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  -webkit-transition: background-color .3s ease;
-  -o-transition: background-color .3s ease;
-  transition: background-color .3s ease;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: opacity .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+  -o-transition: opacity .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+  transition: opacity .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
 }
 
 .burger__line:last-child {
-  top: 21px;
-  -webkit-transform: translateX(-50%) translateY(0);
-  -ms-transform: translateX(-50%) translateY(0);
-  transform: translateX(-50%) translateY(0);
-  -webkit-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, background-color .3s ease, -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
-  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, background-color .3s ease, -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
-  -o-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), background-color .3s ease;
-  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), background-color .3s ease;
-  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), background-color .3s ease, -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  top: 100%;
+  right: 32%;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  -o-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
 }
 
 .burger.open .burger__line:nth-child(1) {
   top: 50%;
-  -webkit-transform: translateX(-50%) translateY(0) rotate(45deg);
-  -ms-transform: translateX(-50%) translateY(0) rotate(45deg);
-  transform: translateX(-50%) translateY(0) rotate(45deg);
+  right: 0;
+  left: 0;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  -ms-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
   -webkit-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
   transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
   -o-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
@@ -283,19 +292,25 @@ body {
 }
 
 .burger.open .burger__line:nth-child(2) {
+  right: 0;
   opacity: 0;
+  -webkit-transition: opacity .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  -o-transition: opacity .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+  transition: opacity .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, right .3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
 }
 
 .burger.open .burger__line:last-child {
   top: 50%;
-  -webkit-transform: translateX(-50%) translateY(0) rotate(-45deg);
-  -ms-transform: translateX(-50%) translateY(0) rotate(-45deg);
-  transform: translateX(-50%) translateY(0) rotate(-45deg);
-  -webkit-transition: top 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87), -webkit-transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s;
-  transition: top 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87), -webkit-transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s;
-  -o-transition: top 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s;
-  transition: top 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s;
-  transition: top 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s, -webkit-transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s;
+  right: 0;
+  left: 0;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  -ms-transform: translateY(-50%) rotate(-45deg);
+  transform: translateY(-50%) rotate(-45deg);
+  -webkit-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+  -o-transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
+  transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s, -webkit-transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
 }
 
 .header__burger:hover .burger__line {
